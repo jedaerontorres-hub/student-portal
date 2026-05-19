@@ -194,14 +194,16 @@ table tr:hover{
   margin-bottom:20px;
 }
 
-form{
-  display:flex;
-  flex-direction:column;
+/* 2-column layout */
+.student-form{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
   gap:15px;
-  max-width:500px;
+  max-width:750px;
 }
 
-form input{
+/* inputs */
+.student-form input{
   width:100%;
   padding:13px;
   border:1px solid #ddd;
@@ -210,24 +212,32 @@ form input{
   font-size:14px;
 }
 
-button{
+/* button full width */
+.student-form button{
+  grid-column: span 2;
   background:#145214;
   color:white;
   border:none;
   padding:13px;
   border-radius:10px;
   cursor:pointer;
-  transition:0.3s;
   font-size:14px;
-  font-weight:500;
+  transition:0.3s;
 }
 
-button:hover{
+.student-form button:hover{
   background:#0f3d0f;
 }
 
-/* ===== RESPONSIVE ===== */
+/* responsive */
 @media(max-width:768px){
+  .student-form{
+    grid-template-columns:1fr;
+  }
+
+  .student-form button{
+    grid-column: span 1;
+  }
 
   .container{
     flex-direction:column;

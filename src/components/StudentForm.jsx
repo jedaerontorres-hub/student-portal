@@ -22,6 +22,7 @@ function StudentForm() {
   const handleSave = (e) => {
     e.preventDefault();
 
+    // simple validation
     if (
       !formData.studentNumber ||
       !formData.firstName ||
@@ -29,12 +30,13 @@ function StudentForm() {
       !formData.course ||
       !formData.yearSection
     ) {
-      alert("Please fill in all required fields!");
+      alert("Please fill in required fields!");
       return;
     }
 
     alert("Successfully Added Student!");
 
+    // reset form
     setFormData({
       studentNumber: "",
       firstName: "",
@@ -51,9 +53,9 @@ function StudentForm() {
     <section className="form-section">
       <h2>Add Student</h2>
 
-      <form onSubmit={handleSave}>
+      <form onSubmit={handleSave} className="student-form">
+
         <input
-          type="text"
           name="studentNumber"
           placeholder="Student Number"
           value={formData.studentNumber}
@@ -61,7 +63,6 @@ function StudentForm() {
         />
 
         <input
-          type="text"
           name="firstName"
           placeholder="First Name"
           value={formData.firstName}
@@ -69,7 +70,6 @@ function StudentForm() {
         />
 
         <input
-          type="text"
           name="middleName"
           placeholder="Middle Name"
           value={formData.middleName}
@@ -77,7 +77,6 @@ function StudentForm() {
         />
 
         <input
-          type="text"
           name="lastName"
           placeholder="Last Name"
           value={formData.lastName}
@@ -85,7 +84,6 @@ function StudentForm() {
         />
 
         <input
-          type="text"
           name="course"
           placeholder="Course"
           value={formData.course}
@@ -93,7 +91,6 @@ function StudentForm() {
         />
 
         <input
-          type="text"
           name="yearSection"
           placeholder="Year & Section"
           value={formData.yearSection}
@@ -101,7 +98,6 @@ function StudentForm() {
         />
 
         <input
-          type="email"
           name="email"
           placeholder="Email Address"
           value={formData.email}
@@ -109,7 +105,6 @@ function StudentForm() {
         />
 
         <input
-          type="text"
           name="contact"
           placeholder="Contact Number"
           value={formData.contact}
@@ -117,6 +112,7 @@ function StudentForm() {
         />
 
         <button type="submit">Add Student</button>
+
       </form>
     </section>
   );
