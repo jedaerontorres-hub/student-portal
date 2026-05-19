@@ -1,33 +1,45 @@
+// StudentTable.jsx
+
 function StudentTable({ students }) {
   return (
-    <section>
-      <h2>Student Records</h2>
+    <section className="table-section">
 
-      <input
-        type="text"
-        placeholder="Search student..."
-        className="search"
-      />
+      <div className="table-header">
 
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Course</th>
-          </tr>
-        </thead>
+        <h2>Student Records</h2>
 
-        <tbody>
-          {students.map(student => (
-            <tr key={student.id}>
-              <td>{student.id}</td>
-              <td>{student.name}</td>
-              <td>{student.course}</td>
+        <div className="search-bar">
+          <input type="text" placeholder="Search student..." />
+        </div>
+
+      </div>
+
+      <div className="table-container">
+
+        <table>
+
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Full Name</th>
+              <th>Course</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+
+          <tbody>
+            {students.map((student) => (
+              <tr key={student.id}>
+                <td>{student.id}</td>
+                <td>{student.name}</td>
+                <td>{student.course}</td>
+              </tr>
+            ))}
+          </tbody>
+
+        </table>
+
+      </div>
+
     </section>
   )
 }

@@ -1,7 +1,12 @@
 function Header() {
   return (
     <header className="header">
-      <h1>Student Portal System</h1>
+
+      <div className="header-text">
+        <h1>Student Management Portal</h1>
+        <p>Student Information System</p>
+      </div>
+
     </header>
   )
 }
