@@ -109,6 +109,7 @@ body{
   background:white;
   border-radius:14px;
   padding:22px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.05);
 }
 
 .card h3{
@@ -129,6 +130,7 @@ body{
   border-radius:14px;
   padding:25px;
   margin-bottom:25px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.05);
 }
 
 .table-header{
@@ -184,6 +186,7 @@ table tr:hover{
   background:white;
   border-radius:14px;
   padding:25px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.05);
 }
 
 .form-section h2{
@@ -192,16 +195,19 @@ table tr:hover{
 }
 
 form{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  display:flex;
+  flex-direction:column;
   gap:15px;
+  max-width:500px;
 }
 
 form input{
+  width:100%;
   padding:13px;
   border:1px solid #ddd;
   border-radius:10px;
   outline:none;
+  font-size:14px;
 }
 
 button{
@@ -212,6 +218,8 @@ button{
   border-radius:10px;
   cursor:pointer;
   transition:0.3s;
+  font-size:14px;
+  font-weight:500;
 }
 
 button:hover{
@@ -255,5 +263,9 @@ button:hover{
 
   .search-bar input{
     width:100%;
+  }
+
+  form{
+    max-width:100%;
   }
 }
