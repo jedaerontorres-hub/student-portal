@@ -1,26 +1,30 @@
-// Dashboard.jsx
+// components/DashboardCards.jsx
 
-function Dashboard() {
+export default function Dashboard({ students }) {
+
   return (
-    <section className="dashboard">
+    <div className="cards">
 
       <div className="card">
-        <h3>Total Students</h3>
-        <h1>150</h1>
+        <h2>{students.length}</h2>
+        <p>Total Students</p>
       </div>
 
       <div className="card">
-        <h3>Total Courses</h3>
-        <h1>10</h1>
+        <h2>4</h2>
+        <p>Courses</p>
       </div>
 
       <div className="card">
-        <h3>Active Users</h3>
-        <h1>95</h1>
+        <h2>95%</h2>
+        <p>Attendance</p>
       </div>
 
-    </section>
-  )
+      <div className="card">
+        <h2>12</h2>
+        <p>Teachers</p>
+      </div>
+
+    </div>
+  );
 }
-
-export default Dashboard

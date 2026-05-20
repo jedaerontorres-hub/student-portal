@@ -1,46 +1,93 @@
 // App.jsx
 
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
-import Header from './components/Header'
-import Sidebar from './components/Sidebar'
-import Dashboard from './components/Dashboard'
-import StudentTable from './components/StudentTable'
-import StudentForm from './components/StudentForm'
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import DashboardCards from "./components/DashboardCards";
+import SearchBar from "./components/SearchBar";
+import StudentTable from "./components/StudentTable";
+import StudentForm from "./components/StudentForm";
+import Login from "./components/Login";
 
-function App() {
+export default function App() {
 
-  const students = [
-    { id: 1, name: "Laila Almanzor", course: "BSIT" },
-    { id: 2, name: "Joyce Ann Francisco", course: "BSCS" },
-    { id: 3, name: "Jenna Jaspio", course: "BSIT" },
-    { id: 4, name: "Glen Lim", course: "BSCS" },
-    { id: 5, name: "Jed Aeron Torres", course: "BSIT" }
-  ]
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  const [search, setSearch] = useState("");
+
+  const [students, setStudents] = useState([
+    {
+      id: 1,
+      studentNo: "2025-001",
+      name: "Juan Dela Cruz",
+      course: "BSIT",
+      section: "3A",
+      status: "Active",
+    },
+
+    {
+      id: 2,
+      studentNo: "2025-002",
+      name: "Maria Santos",
+      course: "BSCS",
+      section: "2B",
+      status: "Active",
+    },
+  ]);
+
+  const handleAddStudent = (newStudent) => {
+    setStudents([
+      ...students,
+      {
+        id: students.length + 1,
+        ...newStudent,
+      },
+    ]);
+  };
+
+  const handleDelete = (id) => {
+    setStudents(
+      students.filter((student) => student.id !== id)
+    );
+  };
+
+  const filteredStudents = students.filter((student) =>
+    student.name.toLowerCase().includes(search.toLowerCase())
+  );
+
+  if (!loggedIn) {
+    return <Login setLoggedIn={setLoggedIn} />;
+  }
 
   return (
-    <div className="container">
+    <div className="app">
 
       <Sidebar />
 
-      <main className="content">
+      <div className="main-content">
 
         <Header />
 
-        <div className="page-content">
+        <DashboardCards students={students} />
 
-          <Dashboard />
+        <SearchBar
+          search={search}
+          setSearch={setSearch}
+        />
 
-          <StudentTable students={students} />
+        <StudentTable
+          students={filteredStudents}
+          handleDelete={handleDelete}
+        />
 
-          <StudentForm />
+        <StudentForm
+          handleAddStudent={handleAddStudent}
+        />
 
-        </div>
-
-      </main>
+      </div>
 
     </div>
-  )
+  );
 }
-
-export default App

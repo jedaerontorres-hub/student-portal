@@ -1,22 +1,51 @@
-// Sidebar.jsx
+// components/Sidebar.jsx
 
-function Sidebar() {
+export default function Sidebar() {
+
   return (
-    <aside className="sidebar">
+    <div className="sidebar">
 
-      <div className="logo">
-        STUDENT PORTAL
+      <div>
+
+        <div className="logo">
+          <h2>SOMS</h2>
+          <p>Student Portal</p>
+        </div>
+
+        <ul>
+
+          <li className="active">
+            Dashboard
+          </li>
+
+          <li>Students</li>
+
+          <li>Courses</li>
+
+          <li>Teachers</li>
+
+          <li>Reports</li>
+
+          <li>Settings</li>
+
+        </ul>
+
       </div>
 
-      <ul>
-        <li className="active">Dashboard</li>
-        <li>Students</li>
-        <li>Courses</li>
-        <li>Profile</li>
-      </ul>
+      <div className="sidebar-profile">
 
-    </aside>
-  )
+        <img
+          src="https://i.pravatar.cc/50"
+          alt=""
+        />
+
+        <div>
+          <h4>Admin User</h4>
+          <span>Administrator</span>
+        </div>
+
+      </div>
+
+    </div>
+  );
 }
-
-export default Sidebar

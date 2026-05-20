@@ -1,14 +1,33 @@
-function Header() {
-  return (
-    <header className="header">
+// components/Header.jsx
 
-      <div className="header-text">
-        <h1>Student Management Portal</h1>
-        <p>Student Information System</p>
+export default function Header() {
+
+  return (
+    <div className="header">
+
+      <div>
+        <h1>Student Management Dashboard</h1>
+        <p>Welcome to CvSU Student Portal</p>
       </div>
 
-    </header>
-  )
-}
+      <div className="header-right">
+        <button className="notification-btn">
+          🔔
+        </button>
 
-export default Header
+        <div className="profile">
+          <img
+            src="https://i.pravatar.cc/40"
+            alt=""
+          />
+
+          <div>
+            <h4>Admin User</h4>
+            <span>Administrator</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  );
+}

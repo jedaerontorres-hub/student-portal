@@ -1,47 +1,82 @@
-// StudentTable.jsx
+// components/StudentTable.jsx
 
-function StudentTable({ students }) {
+export default function StudentTable({
+  students,
+  handleDelete,
+}) {
+
   return (
-    <section className="table-section">
+    <div className="table-container">
 
-      <div className="table-header">
+      <table>
 
-        <h2>Student Records</h2>
+        <thead>
+          <tr>
+            <th>Student No</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Section</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
 
-        <div className="search-bar">
-          <input type="text" placeholder="Search student..." />
-        </div>
+        <tbody>
 
-      </div>
-
-      <div className="table-container">
-
-        <table>
-
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Full Name</th>
-              <th>Course</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            {students.map((student) => (
+          {students.length > 0 ? (
+            students.map((student) => (
               <tr key={student.id}>
-                <td>{student.id}</td>
+
+                <td>{student.studentNo}</td>
+
                 <td>{student.name}</td>
+
                 <td>{student.course}</td>
+
+                <td>{student.section}</td>
+
+                <td>
+                  <span className="status">
+                    {student.status}
+                  </span>
+                </td>
+
+                <td>
+
+                  <button
+                    className="edit-btn"
+                    onClick={() =>
+                      alert("Edit Feature Soon")
+                    }
+                  >
+                    Edit
+                  </button>
+
+                  <button
+                    className="delete-btn"
+                    onClick={() =>
+                      handleDelete(student.id)
+                    }
+                  >
+                    Delete
+                  </button>
+
+                </td>
+
               </tr>
-            ))}
-          </tbody>
+            ))
+          ) : (
+            <tr>
+              <td colSpan="6">
+                No students found.
+              </td>
+            </tr>
+          )}
 
-        </table>
+        </tbody>
 
-      </div>
+      </table>
 
-    </section>
-  )
+    </div>
+  );
 }
-
-export default StudentTable
