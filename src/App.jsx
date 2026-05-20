@@ -6,7 +6,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
-import DashboardCards from "./components/Dashboard";
+import Dashboard from "./components/Dashboard";
 import SearchBar from "./components/SearchBar";
 import StudentTable from "./components/StudentTable";
 import StudentForm from "./components/StudentForm";
@@ -112,7 +112,7 @@ export default function App() {
 
         <StudentTable
           students={filteredStudents}
-          handleDelete={handleDelete}
+          handleDelete={handleDeleteStudent}
         />
 
         <StudentForm

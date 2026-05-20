@@ -1,14 +1,8 @@
-// components/StudentTable.jsx
-
-export default function StudentTable({
-  students,
-  handleDelete,
-}) {
-
+export default function StudentTable({ students, handleDelete }) {
   return (
     <div className="table-container">
 
-      <table>
+      <table className="student-table">
 
         <thead>
           <tr>
@@ -22,57 +16,26 @@ export default function StudentTable({
         </thead>
 
         <tbody>
+          {students.map((student) => (
+            <tr key={student.id}>
 
-          {students.length > 0 ? (
-            students.map((student) => (
-              <tr key={student.id}>
+              <td>{student.studentNo}</td>
+              <td>{student.name}</td>
+              <td>{student.course}</td>
+              <td>{student.section}</td>
+              <td>{student.status}</td>
 
-                <td>{student.studentNo}</td>
-
-                <td>{student.name}</td>
-
-                <td>{student.course}</td>
-
-                <td>{student.section}</td>
-
-                <td>
-                  <span className="status">
-                    {student.status}
-                  </span>
-                </td>
-
-                <td>
-
-                  <button
-                    className="edit-btn"
-                    onClick={() =>
-                      alert("Edit Feature Soon")
-                    }
-                  >
-                    Edit
-                  </button>
-
-                  <button
-                    className="delete-btn"
-                    onClick={() =>
-                      handleDelete(student.id)
-                    }
-                  >
-                    Delete
-                  </button>
-
-                </td>
-
-              </tr>
-            ))
-          ) : (
-            <tr>
-              <td colSpan="6">
-                No students found.
+              <td>
+                <button
+                  className="delete-btn"
+                  onClick={() => handleDelete(student.studentNo)}
+                >
+                  Delete
+                </button>
               </td>
-            </tr>
-          )}
 
+            </tr>
+          ))}
         </tbody>
 
       </table>
