@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import "./App.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
@@ -20,19 +21,46 @@ export default function App() {
   const [students, setStudents] = useState([
     {
       id: 1,
-      studentNo: "2025-001",
-      name: "Juan Dela Cruz",
+      studentNo: "202315224",
+      name: "Laila Mea Almanzor",
       course: "BSIT",
-      section: "3A",
+      section: "3-1",
       status: "Active",
     },
 
     {
       id: 2,
-      studentNo: "2025-002",
-      name: "Maria Santos",
-      course: "BSCS",
-      section: "2B",
+      studentNo: "202315214",
+      name: "Joyce Ann Francisco",
+      course: "BSIT",
+      section: "3-1",
+      status: "Active",
+    },
+
+    {
+      id: 3,
+      studentNo: "202315225",
+      name: "Jenna Jaspio",
+      course: "BSIT",
+      section: "3-1",
+      status: "Active",
+    },
+
+    {
+      id: 4,
+      studentNo: "202315320",
+      name: "Glen Lim",
+      course: "BSIT",
+      section: "3-1",
+      status: "Active",
+    },
+
+    {
+      id: 5,
+      studentNo: "202315222",
+      name: "Jed Aeron Torres",
+      course: "BSIT",
+      section: "3-1",
       status: "Active",
     },
   ]);
@@ -47,11 +75,16 @@ export default function App() {
     ]);
   };
 
-  const handleDelete = (id) => {
-    setStudents(
-      students.filter((student) => student.id !== id)
-    );
-  };
+ const handleDeleteStudent = (studentNo) => {
+  setStudents((prev) =>
+    prev.map((student) =>
+      student.studentNo === studentNo
+        ? { ...student, status: "Deleted" }
+        : student
+    )
+  );
+  alert("Student deleted successfully!");
+};
 
   const filteredStudents = students.filter((student) =>
     student.name.toLowerCase().includes(search.toLowerCase())
@@ -70,7 +103,7 @@ export default function App() {
 
         <Header />
 
-        <DashboardCards students={students} />
+        <Dashboard students={students} />
 
         <SearchBar
           search={search}

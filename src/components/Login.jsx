@@ -15,14 +15,7 @@ export default function Login({
       <div className="overlay"></div>
 
       <div className="login-card">
-
-        <img
-          src=""
-          alt=""
-        />
-
         <h1>CvSU Student Portal</h1>
-
         <p>Login your account</p>
 
         <form onSubmit={handleLogin}>

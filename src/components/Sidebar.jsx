@@ -16,27 +16,33 @@ export default function Sidebar() {
         <ul>
 
           <li className="active">
-            📊 Dashboard
+            <i className="bi bi-grid-fill"></i>
+            Dashboard
           </li>
 
           <li>
-            👨‍🎓 Students
+            <i className="bi bi-people-fill"></i>
+            Students
           </li>
 
           <li>
-            📚 Courses
+            <i className="bi bi-book-fill"></i>
+            Courses
           </li>
 
           <li>
-            👨‍🏫 Teachers
+            <i className="bi bi-person-video3"></i>
+            Teachers
           </li>
 
           <li>
-            📄 Reports
+            <i className="bi bi-file-earmark-text-fill"></i>
+            Reports
           </li>
 
           <li>
-            ⚙ Settings
+            <i className="bi bi-gear-fill"></i>
+            Settings
           </li>
 
         </ul>
@@ -44,7 +50,7 @@ export default function Sidebar() {
       </div>
 
       <div className="sidebar-footer">
-        CvSU Main Campus
+        New User
       </div>
 
     </div>
