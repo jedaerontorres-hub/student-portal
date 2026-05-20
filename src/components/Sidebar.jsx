@@ -8,42 +8,43 @@ export default function Sidebar() {
       <div>
 
         <div className="logo">
-          <h2>SOMS</h2>
-          <p>Student Portal</p>
+
+          <h2>Student Portal System</h2>
+
         </div>
 
         <ul>
 
           <li className="active">
-            Dashboard
+            📊 Dashboard
           </li>
 
-          <li>Students</li>
+          <li>
+            👨‍🎓 Students
+          </li>
 
-          <li>Courses</li>
+          <li>
+            📚 Courses
+          </li>
 
-          <li>Teachers</li>
+          <li>
+            👨‍🏫 Teachers
+          </li>
 
-          <li>Reports</li>
+          <li>
+            📄 Reports
+          </li>
 
-          <li>Settings</li>
+          <li>
+            ⚙ Settings
+          </li>
 
         </ul>
 
       </div>
 
-      <div className="sidebar-profile">
-
-        <img
-          src="https://i.pravatar.cc/50"
-          alt=""
-        />
-
-        <div>
-          <h4>Admin User</h4>
-          <span>Administrator</span>
-        </div>
-
+      <div className="sidebar-footer">
+        CvSU Main Campus
       </div>
 
     </div>

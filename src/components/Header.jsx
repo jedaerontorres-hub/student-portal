@@ -11,21 +11,15 @@ export default function Header() {
       </div>
 
       <div className="header-right">
+
         <button className="notification-btn">
           🔔
         </button>
 
-        <div className="profile">
-          <img
-            src="https://i.pravatar.cc/40"
-            alt=""
-          />
+        <button className="logout-btn">
+          Logout
+        </button>
 
-          <div>
-            <h4>Admin User</h4>
-            <span>Administrator</span>
-          </div>
-        </div>
       </div>
 
     </div>
