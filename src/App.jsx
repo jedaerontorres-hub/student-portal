@@ -5,7 +5,7 @@ import "./App.css";
 
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
-import DashboardCards from "./components/DashboardCards";
+import DashboardCards from "./components/Dashboard";
 import SearchBar from "./components/SearchBar";
 import StudentTable from "./components/StudentTable";
 import StudentForm from "./components/StudentForm";
