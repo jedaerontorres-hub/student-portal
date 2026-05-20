@@ -21,21 +21,17 @@ body{
 .login-page{
   width:100%;
   height:100vh;
-
   display:flex;
   justify-content:center;
   align-items:center;
-
   position:relative;
   overflow:hidden;
-
   background:
   linear-gradient(
     rgba(0,0,0,0.65),
     rgba(0,0,0,0.7)
   ),
   url('/src/components/building.png');
-
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
@@ -52,55 +48,21 @@ body{
   background:rgba(255,255,255,0.02);
 }
 
-/* Floating light */
-
-.login-page::after{
-  content:'';
-
-  position:absolute;
-
-  width:700px;
-  height:700px;
-
-  border-radius:50%;
-
-  background:
-  radial-gradient(
-    rgba(255,255,255,0.12),
-    transparent
-  );
-
-  top:-250px;
-  right:-150px;
-
-  animation:float 10s infinite ease-in-out;
-}
-
 /* LOGIN CARD */
 
 .login-card{
   width:420px;
-
   position:relative;
   z-index:10;
-
   padding:45px;
-
   border-radius:30px;
-
-  background:rgba(255,255,255,0.12);
-
+  background:rgb(247, 247, 247);
   backdrop-filter:blur(18px);
-
-  border:1px solid rgba(255,255,255,0.15);
-
+  border:1px solid rgba(39, 39, 39, 0.15);
   box-shadow:
-  0 15px 40px rgba(0,0,0,0.35);
-
+  0 15px 40px rgba(8, 100, 38, 0.575);
   text-align:center;
-
   color:white;
-
   animation:fadeIn 1s ease;
 }
 
@@ -108,9 +70,7 @@ body{
 
 .login-card img{
   width:95px;
-
   margin-bottom:20px;
-
   filter:drop-shadow(
     0 5px 10px rgba(0,0,0,0.4)
   );
@@ -140,28 +100,19 @@ body{
 
 .login-card input{
   padding:16px;
-
   border:none;
-
   border-radius:14px;
-
   outline:none;
-
   background:rgba(255,255,255,0.15);
-
   border:
   1px solid rgba(255,255,255,0.1);
-
   color:white;
-
   font-size:15px;
-
   transition:0.3s;
 }
 
 .login-card input:focus{
   background:rgba(255,255,255,0.2);
-
   border:
   1px solid rgba(255,255,255,0.3);
 }
@@ -174,29 +125,19 @@ body{
 
 .login-card button{
   padding:15px;
-
   border:none;
-
   border-radius:14px;
-
-  background:white;
-
-  color:#14532d;
-
+  background:rgb(9, 48, 8);
+  color:#ffffff;
   font-weight:600;
-
   cursor:pointer;
-
   transition:0.3s;
-
   font-size:16px;
 }
 
 .login-card button:hover{
   transform:translateY(-4px);
-
   background:#d1fae5;
-
   box-shadow:
   0 10px 20px rgba(0,0,0,0.2);
 }
@@ -216,22 +157,17 @@ body{
 
 .sidebar{
   width:270px;
-
   background:
   linear-gradient(
     180deg,
     #0b2e1b,
     #14532d
   );
-
   color:white;
-
   padding:30px 20px;
-
   display:flex;
   flex-direction:column;
   justify-content:space-between;
-
   box-shadow:
   5px 0 20px rgba(0,0,0,0.08);
 }
@@ -257,21 +193,15 @@ body{
 
 .sidebar li{
   padding:16px 18px;
-
   margin-bottom:12px;
-
   border-radius:14px;
-
   cursor:pointer;
-
   transition:0.3s;
-
   font-weight:500;
 }
 
 .sidebar li:hover{
   background:rgba(255,255,255,0.1);
-
   transform:translateX(6px);
 }
 
@@ -283,15 +213,10 @@ body{
 
 .sidebar-footer{
   padding:15px;
-
   text-align:center;
-
   border-radius:15px;
-
   background:rgba(255,255,255,0.08);
-
   font-size:14px;
-
   opacity:0.8;
 }
 
@@ -312,7 +237,6 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-
   margin-bottom:35px;
 }
 
@@ -337,20 +261,13 @@ body{
 .notification-btn{
   width:48px;
   height:48px;
-
   border:none;
-
   border-radius:50%;
-
   cursor:pointer;
-
   background:white;
-
   font-size:18px;
-
   box-shadow:
   0 5px 15px rgba(0,0,0,0.08);
-
   transition:0.3s;
 }
 
@@ -362,19 +279,12 @@ body{
 
 .logout-btn{
   padding:13px 22px;
-
   border:none;
-
   border-radius:12px;
-
   background:#14532d;
-
   color:white;
-
   cursor:pointer;
-
   transition:0.3s;
-
   font-weight:500;
 }
 
@@ -389,29 +299,20 @@ body{
 
 .cards{
   display:grid;
-
   grid-template-columns:
   repeat(auto-fit,minmax(230px,1fr));
-
   gap:22px;
-
   margin-bottom:35px;
 }
 
 .card{
   background:white;
-
   padding:30px;
-
   border-radius:24px;
-
   box-shadow:
   0 10px 25px rgba(0,0,0,0.07);
-
   transition:0.3s;
-
   position:relative;
-
   overflow:hidden;
 }
 
@@ -419,15 +320,11 @@ body{
 
 .card::before{
   content:'';
-
   position:absolute;
-
   top:0;
   left:0;
-
   width:100%;
   height:6px;
-
   background:
   linear-gradient(
     90deg,
@@ -459,44 +356,29 @@ body{
   display:flex;
   justify-content:space-between;
   gap:15px;
-
   margin-bottom:25px;
 }
 
 .search-container input{
   flex:1;
-
   padding:15px;
-
   border:none;
-
   border-radius:14px;
-
   background:white;
-
   outline:none;
-
   font-size:15px;
-
   box-shadow:
   0 5px 15px rgba(0,0,0,0.05);
 }
 
 .search-container button{
   padding:15px 28px;
-
   border:none;
-
   background:#14532d;
-
   color:white;
-
   border-radius:14px;
-
   cursor:pointer;
-
   transition:0.3s;
-
   font-weight:500;
 }
 
@@ -511,39 +393,30 @@ body{
 
 .table-container{
   background:white;
-
-  border-radius:24px;
-
+  border-radius:0;
   overflow-x:auto;
-
   box-shadow:
   0 10px 25px rgba(0,0,0,0.06);
-
   margin-bottom:35px;
 }
 
 table{
   width:100%;
   border-collapse:collapse;
+  border-spacing:0;
 }
 
 th{
   background:#14532d;
-
   color:white;
-
   padding:20px;
-
   text-align:left;
-
   font-size:14px;
 }
 
 td{
   padding:20px;
-
   border-bottom:1px solid #eee;
-
   color:#374151;
 }
 
@@ -559,15 +432,10 @@ tr:hover{
 
 .status{
   background:#d1fae5;
-
   color:#065f46;
-
   padding:7px 14px;
-
   border-radius:20px;
-
   font-size:13px;
-
   font-weight:500;
 }
 
@@ -575,19 +443,12 @@ tr:hover{
 
 .edit-btn{
   padding:9px 16px;
-
   border:none;
-
   background:#14532d;
-
   color:white;
-
   border-radius:10px;
-
   margin-right:8px;
-
   cursor:pointer;
-
   transition:0.3s;
 }
 
@@ -597,17 +458,11 @@ tr:hover{
 
 .delete-btn{
   padding:9px 16px;
-
   border:none;
-
   background:#ef4444;
-
   color:white;
-
   border-radius:10px;
-
   cursor:pointer;
-
   transition:0.3s;
 }
 
@@ -621,41 +476,30 @@ tr:hover{
 
 .form-container{
   background:white;
-
   padding:35px;
-
   border-radius:24px;
-
   box-shadow:
   0 10px 25px rgba(0,0,0,0.06);
 }
 
 .form-container h2{
   margin-bottom:25px;
-
   color:#111827;
 }
 
 .form-container form{
   display:grid;
-
   grid-template-columns:
   repeat(auto-fit,minmax(220px,1fr));
-
   gap:18px;
 }
 
 .form-container input{
   padding:15px;
-
   border:none;
-
   background:#f3f4f6;
-
   border-radius:14px;
-
   outline:none;
-
   font-size:15px;
 }
 
@@ -665,21 +509,13 @@ tr:hover{
 
 .form-container button{
   padding:15px;
-
   border:none;
-
   background:#14532d;
-
   color:white;
-
   border-radius:14px;
-
   cursor:pointer;
-
   transition:0.3s;
-
   font-size:15px;
-
   font-weight:500;
 }
 
@@ -723,7 +559,6 @@ tr:hover{
 ========================= */
 
 @keyframes fadeIn{
-
   from{
     opacity:0;
     transform:translateY(20px);
@@ -732,22 +567,6 @@ tr:hover{
   to{
     opacity:1;
     transform:translateY(0);
-  }
-
-}
-
-@keyframes float{
-
-  0%{
-    transform:translateY(0px);
-  }
-
-  50%{
-    transform:translateY(25px);
-  }
-
-  100%{
-    transform:translateY(0px);
   }
 
 }

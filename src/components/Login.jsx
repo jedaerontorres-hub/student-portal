@@ -17,7 +17,7 @@ export default function Login({
       <div className="login-card">
 
         <img
-          src="https://upload.wikimedia.org/wikipedia/en/3/35/Cavite_State_University_%28CvSU%29.png"
+          src=""
           alt=""
         />
 
