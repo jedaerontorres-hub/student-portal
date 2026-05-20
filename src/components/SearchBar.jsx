@@ -17,10 +17,6 @@ export default function SearchBar({
         }
       />
 
-      <button>
-        Add Student
-      </button>
-
     </div>
   );
 }
